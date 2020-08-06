@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echarts</title>
+    <!-- 引入echarts -->
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {
+            xAxis: {
+                // data: []
+                show:false
+            },
+            yAxis: {
+                // data: []
+                show:false
+            },
+            grid: {
+                show:false
+            },
+            series: [{
+                type: 'line',
+                //修改data数据就能改变图形样式
+                data: [[5,12],[4,10],[7,20],[5,20],[3,30],[6,50],[1,39],[3,27]],
+                itemStyle:{
+                    opacity:0
+                }
+            }]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
